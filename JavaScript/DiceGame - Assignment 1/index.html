@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Dice Game</title>
+
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <h1>Dice Game</h1>
+  <div class="container">
+    <div class="player-container">
+      <div class="players">
+        <div class="p1 player active" id="p1">
+          <div class="pname" id="p1n">Player 1</div>
+          <div class="p1-input" style="display: block;">
+            <input type="text" id="input-pname-1" onfocus="this.value=''" placeholder="Enter Player Name">
+            <!-- <button id="submit-pname-1">Save Name</button> -->
+          </div>
+
+          <div class="saved-score">
+            <p>Saved Score:</p>
+            <p id="saved-score-1">
+              0
+            </p>
+          </div>
+          <div class="current-score">
+            <p>Current Score:</p>
+            <p id="curr-score-1">
+              0
+            </p>
+          </div>
+        </div>
+        <div class="p2 player active" id="p2">
+          <div class="pname" id="p2n">Player 2</div>
+          <div class="p2-input" style="display: block;">
+            <input type="text" id="input-pname-2" onfocus="this.value=''" placeholder="Enter Player Name">
+            <!-- <button id="submit-pname-2">Save Name</button> -->
+          </div>
+          <div class="saved-score">
+            <p>Saved Score:</p>
+            <p id="saved-score-2">
+              0
+            </p>
+          </div>
+          <div class="current-score">
+            <p>Current Score:</p>
+            <p id="curr-score-2">
+              0
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="../images/dice-5.png" alt="Start Game" class="dice" id="dice">
+    <div class="buttons-use">
+      <button id="roll-btn">Roll Dice</button>
+      <button id="save-btn">Save Score</button>
+      <button id="new-game-btn">New Game</button>
+    </div>
+    <div class="winnner" id="winner">sss</div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
