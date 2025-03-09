@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div id="startScreen">
+      <h1>Quiz Game</h1>
+      <p>This Quiz Contains Computer Science Questions.</p>
+      <p>Please Select the Difficulty Level and click on Start Game to proceed.</p>
+      <div class="difficulty">
+        <button class="difficultySelector">Easy</button>
+        <button class="difficultySelector">Medium</button>
+        <button class="difficultySelector">Hard</button>
+      </div>
+      <div class="startButton">
+        <button id="startButton">Start Game</button>
+      </div>
+
+    </div>
+
+    <div id="gameScreen" class="hidden">
+      <div id="statusBar">
+        <div id="questionNumber">
+          <p>Question :</p>
+          <p id="questionIndex">1</p>
+          <p>/20</p>
+        </div>
+        <div>
+          <p id="timer">Time: 15</p>
+        </div>
+        <div id="scoreBar">
+          <p>Current Score:</p>
+          <p id="currentScore">0</p>
+        </div>
+      </div>
+      <div id="questionContainer">
+        <h2 id="questionText"></h2>
+        <div class="options">
+          <button class="option"></button>
+          <button class="option"></button>
+          <button class="option"></button>
+          <button class="option"></button>
+        </div>
+      </div>
+      <div id="feedback"></div>
+    </div>
+
+    <div id="endScreen" class="hidden">
+      <h1>Game Over</h1>
+      <h2 id="finalScore"></h2>
+      <button id="playAgain">Play Again</button>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>

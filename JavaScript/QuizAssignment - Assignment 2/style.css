@@ -1,0 +1,121 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  padding: 20px;
+  width: 100%;
+  max-width: 750px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#gameScreen {
+  width: 100%;
+}
+h1,
+h2 {
+  text-align: center;
+}
+.hidden {
+  display: none !important;
+}
+button {
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 16px;
+  border: 1px solid #b7b7b7;
+  border-radius: 4px;
+}
+
+.difficulty {
+  display: flex;
+  justify-content: space-between;
+}
+.difficultySelector {
+  width: 30%;
+}
+.difficultySelector:focus {
+  background: #cbcbcb;
+}
+
+.startButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#startButton {
+  width: 100%;
+  background: #b7ea8e;
+  border-color: #82bf4f;
+}
+.options {
+  margin-top: 15px;
+}
+.options button {
+  width: 100%;
+  margin-bottom: 10px;
+  background: #e0e0e0;
+  color: #333;
+}
+#statusBar {
+  display: flex;
+  justify-content: space-between;
+}
+#questionNumber,
+#scoreBar {
+  border-style: solid;
+  border-color: #a9b3ff;
+  border-width: 1px;
+  display: flex;
+  background: #e4ecfc;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+}
+#timer {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+}
+#feedback {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+}
+#endScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.correct {
+  border-style: solid;
+  border-color: #0b6b00;
+  border-width: 1px;
+  background-color: rgb(208, 255, 194) !important;
+}
+.incorrect {
+  border-style: solid;
+  border-color: #480000;
+  border-width: 1px;
+  background-color: rgb(255, 187, 187) !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .difficulty {
+    display: flex;
+    flex-direction: column;
+  }
+  .difficultySelector {
+    width: 100%;
+  }
+}
