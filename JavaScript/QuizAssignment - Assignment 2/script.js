@@ -54,6 +54,9 @@ optionsButtons.forEach((button) => {
 function startGame() {
   startScreen.classList.add("hidden");
   gameScreen.classList.remove("hidden");
+  if (difficulty === "") {
+    difficulty = levels[0];
+  }
   fetchQuestions();
 }
 
@@ -200,6 +203,7 @@ function resetGame() {
   questions = [];
   currentQuestionIndex = 0;
   questionNo.textContent = "1";
+  difficulty = "";
   optionsButtons.forEach((button) => {
     button.textContent = "";
     button.disabled = false;
