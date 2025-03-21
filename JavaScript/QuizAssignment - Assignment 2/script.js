@@ -12,10 +12,12 @@ const feedbackDisplay = document.getElementById("feedback");
 const runningScore = document.getElementById("currentScore");
 const finalScoreDisplay = document.getElementById("finalScore");
 const difficultySetting = document.getElementsByClassName("difficultySelector");
+const categoryValues = document.getElementById("categorySelector")
 const levels = ["easy", "medium", "hard"];
 var difficulty = "";
 
 // Game states and flags
+let category = categoryValues.value;
 let questions = [];
 let currentQuestionIndex = 0;
 let score = 0;
@@ -57,6 +59,7 @@ function startGame() {
   if (difficulty === "") {
     difficulty = levels[0];
   }
+  category = categoryValues.value;
   fetchQuestions();
 }
 
@@ -65,8 +68,9 @@ function arrayRandomizer(arr) {
 }
 
 function fetchQuestions() {
+  console.log(category);
   fetch(
-    `https://opentdb.com/api.php?amount=20&category=18&difficulty=${difficulty}&type=multiple`
+    `https://opentdb.com/api.php?amount=20&category=${category}&difficulty=${difficulty}&type=multiple`
   )
     .then((response) => response.json())
     .then((data) => {
