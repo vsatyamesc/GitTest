@@ -12,7 +12,7 @@ const feedbackDisplay = document.getElementById("feedback");
 const runningScore = document.getElementById("currentScore");
 const finalScoreDisplay = document.getElementById("finalScore");
 const difficultySetting = document.getElementsByClassName("difficultySelector");
-const categoryValues = document.getElementById("categorySelector")
+const categoryValues = document.getElementById("categorySelector");
 const levels = ["easy", "medium", "hard"];
 var difficulty = "";
 
@@ -68,7 +68,6 @@ function arrayRandomizer(arr) {
 }
 
 function fetchQuestions() {
-  console.log(category);
   fetch(
     `https://opentdb.com/api.php?amount=20&category=${category}&difficulty=${difficulty}&type=multiple`
   )
