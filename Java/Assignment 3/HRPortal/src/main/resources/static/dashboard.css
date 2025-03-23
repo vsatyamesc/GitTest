@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0 10vw 0 10vw;
+  background-color: #f6f6f6;
+}
+.container{
+  height: 99vh;
+  background-color: #fff;
+  padding: 1vh 1vw 0 1vw;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: left;
+}
+
+button {
+  font-size: medium;
+  background-color: #0055ff;
+  color: #fff;
+  border: none;
+}
+button:hover {
+  background-color: #0036ff;
+}
+
+.options {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.options button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.employee-list {
+  max-height: 500px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+label{
+  font-size: large;
+}
+input{
+  font-size: large;
+}
+
+.employee {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+
+.employee-basic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.employee-details {
+  margin-top: 10px;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.editEmployeeForm, .addEmployeeForm{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: medium;
+}
+
+.updateEmployeeBtn, .addEmployeeBtn{
+  padding: 10px;
+}
+
+.hidden{
+  display: none;
+}
+
+.edit, .delete{
+  margin-top : 5px;
+}
+
+.employee-actions button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+

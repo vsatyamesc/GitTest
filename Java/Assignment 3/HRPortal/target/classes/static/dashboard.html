@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HR Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+</head>
+<div class="container">
+    <h1>HR Dashboard</h1>
+    <div class="options">
+        <button id="viewManage">View Employees</button>
+        <button id="addEmployee">Add Employee</button>
+    </div>
+
+    <!-- Employee List Section -->
+    <div class="employee-list" id="employee-list">
+        <!-- Employee entries will be dynamically added here -->
+    </div>
+
+    <!-- Add Employee Form (Hidden by Default) -->
+    <div id="addEmployeeForm" class="hidden">
+        <h2>Add New Employee</h2>
+        <form id="employeeForm" class="addEmployeeForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <label for="department">Department:</label>
+            <input type="text" id="department" name="department" />
+            <label for="designation">Designation:</label>
+            <input type="text" id="designation" name="designation" />
+            <label for="salary">Salary:</label>
+            <input type="text" id="salary" name="salary" />
+            <button type="submit" class="addEmployeeBtn">Add Employee</button>
+        </form>
+    </div>
+    <div id="editEmployeeForms" class="hidden">
+        <h2>Edit Employee Details</h2>
+        <form id="editEmployeeForm" class="editEmployeeForm">
+            <label for="editName">Name:</label>
+            <input type="text" id="editName" name="name" required />
+            <label for="editEmail">Email:</label>
+            <input type="email" id="editEmail" name="email" required />
+            <label for="editDepartment">Department:</label>
+            <input type="text" id="editDepartment" name="department" />
+            <label for="editDesignation">Position:</label>
+            <input type="text" id="editDesignation" name="designation" />
+            <label for="editSalary">Salary:</label>
+            <input type="text" id="editSalary" name="salary" />
+            <button type="submit" class="updateEmployeeBtn">Update Employee</button>
+        </form>
+    </div>
+</div>
+<!-- Script -->
+<script src="dashboard.js"></script>
+</body>
+
+</html>
