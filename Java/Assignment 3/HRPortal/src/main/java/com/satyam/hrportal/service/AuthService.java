@@ -3,6 +3,8 @@ package com.satyam.hrportal.service;
 import com.satyam.hrportal.model.AuthToken;
 import com.satyam.hrportal.repository.AuthTokenRepository;
 import com.satyam.hrportal.repository.HRRepository;
+import jakarta.transaction.Transactional;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
@@ -31,7 +33,8 @@ public class AuthService {
         // is Valid HR
         return hrService.hrAuth(username, password);
     }
-
+    @Transactional
+    @Scheduled(fixedRate = 60000)
     public void invalidateToken(){
         authTokenRepository.deleteAllExpiredToken(LocalDateTime.now());
     }
