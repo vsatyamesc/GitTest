@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PostList from "../components/PostList";
 import PostDetail from "../components/PostDetail";
-import { getStaticProps } from "next/dist/build/templates/pages";
+
 export async function getStaticProps() {
   const res = await fetch("http://localhost:3000/api/posts");
   const posts = await res.json();
